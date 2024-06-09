@@ -11,6 +11,7 @@
 </head>
 <body>
     <header>
+        <div class="conteiner-menu">
     <button id="toggleNav" class="menu">MENU</button>  
     <nav id="navMenu">
         <div id="subMenu">
@@ -27,14 +28,54 @@
     <button id="muteButton" class="mute-button" onclick="toggleMute()">
         <i id="muteIcon" class="fas fa-volume-up"></i>
     </button>
+    </div>  
     </header>
     <main>
+        <div class="slider">
 
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <div class="slide frist">
+                    <img src="./assets/Imagens/Horizonte.jpg" alt="projeto1">
+                </div>
+                <div class="slide">
+                    <img src="./assets/Imagens/Cyberpunk.jpg" alt="projeto2">
+                </div>
+                <div class="slide">
+                    <img src="./assets/Imagens/Deserto.jpg" alt="projeto3">
+                </div>
+                <div class="slide">
+                    <img src="./assets/Imagens/JardimJp.jpg" alt="projeto4">
+                </div>
+                <div class="navegation-auto">
+                    <div class="auto-botao1"></div>
+                    <div class="auto-botao2"></div>
+                    <div class="auto-botao3"></div>
+                    <div class="auto-botao4"></div>
+                </div>  
+            </div>
+
+                <div class="manual-navegation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                </div>
+
+        </div>
     </main>
     <footer>
-
+        <div class="proximapg">
+            <a href="Contatos" class="arrow-down">
+                <span class="texto">Próxima Página</span>
+                <span class="arrow"></span>
+            </a>
+        </div>
     </footer>
-
+    <script src="./js/slider.js" defer></script> 
     <script src="./js/esconder menu.js" defer></script> 
     <script src="./js/botao do audio.js" defer></script>
  </body>
