@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+    <title>Portifólio</title>
+</head>
+<body>
+    <header>
+    <button id="toggleNav" class="menu">MENU</button>  
+    <nav id="navMenu">
+        <div id="subMenu">
+            <button onclick="location.href='index.html';" class="Home">Inicio</button>
+            <button onclick="location.href='Projetos.html';" class="Projetos">Projetos</button>
+            <button onclick="location.href='Contatos.html';" class="Contatos">Contatos</button>
+        </div>
+    </nav>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="./assets/Audios/8-bit-dream-land-142093.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <button id="muteButton" class="mute-button" onclick="toggleMute()">
+        <i id="muteIcon" class="fas fa-volume-up"></i>
+    </button>
+    </header>
+    <main>
+    <div class="avatar1">
+        <img src="./assets/Imagens/avatar do incio.png" alt="Garoto sentado num planeta">
+    </div>
+    <div class="eu">
+        <h1>
+            <p class="ola">
+                OLÁ! ME CHAMO WALISSON RIBEIRO SOUZA, SOU ESTUDANDE DE TRANSPORTE TERRESTRE - UFBA
+            </p> 
+            <p class="trilha">
+                MINHA TRILHA PELO MUNDO TECNOLÓGICO COMEÇOU APÓS UMA PALESTRA NA FACULDADE.
+            </p> 
+            <p class="objetivo">
+                DESENVOLVEDOR FRONT-END, COM OBJETIVO DE VIRAR FULL STACK.
+            </p>
+        </h1>
+    </div>
+    </main>
+    <footer>
+    <div class="proximapg">
+        <a href="" class="arrow-down">
+            <span class="texto">Próxima Página</span>
+            <span class="arrow"></span>
+        </a>
+    </div>
+</footer>
+<script src="./js/esconder menu.js" defer></script> 
+<script src="./js/botao do audio.js" defer></script>
+</body>
+</html>
