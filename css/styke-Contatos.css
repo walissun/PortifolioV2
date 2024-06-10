@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 html {
     margin: 0;
     padding: 0;
@@ -156,6 +157,7 @@ section {
     justify-content: center;
     flex-direction: column;
     padding: 10px 45px;
+    margin-left: 200px;
     background-color: #1d1d2e8e;
     width: 500px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -221,6 +223,132 @@ form button:hover {
     color: #101026;
     border-radius: 16px;
  }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.btn-git {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 27px;
+    color: #14fff1;
+    margin-left: 27px;
+    padding: 16px 64px;
+    border-radius: 16px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #14fff1;
+    box-shadow: inset 0 0 32px #1d1d2e8e, 0 0 32px #1d1d2e8e;
+    position: relative;
+    animation: floating 3s infinite;
+  }
+  
+  .btn-git::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #14fff1;
+    left: 0;
+    top: 120%;
+    transform: perspective(64px) rotateX(40deg) scale(1, 0.35);
+    filter: blur(64px);
+    opacity: 0.7;
+  }
+  
+  .btn-git::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    background-color: #14fff1;
+    box-shadow: 0 0 128px 32px #14fff1;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+  }
+  
+  .btn-git:hover::after,
+  .btn-git:focus::after {
+    opacity: 1;
+  }
+  
+  .btn-git:hover::before,
+  .btn-git:focus::before {
+    opacity: 1;
+  }
+  
+  .btn-git:hover,
+  .btn-git:focus {
+    color:  #1d1d2e8e;
+    text-shadow: none;
+  }
+
+  .btn-linkedin {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 27px;
+    color: #14fff1;
+    top: 200px;
+    right: 250px;
+    margin-left: 27px;
+    padding: 16px 64px;
+    border-radius: 16px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #14fff1;
+    box-shadow: inset 0 0 32px  #1d1d2e8e, 0 0 32px  #1d1d2e8e;
+    position: relative;
+    animation: floating 3s infinite;
+  }
+  
+  .btn-linkedin::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #14fff1;
+    left: 0;
+    top: 120%;
+    transform: perspective(64px) rotateX(40deg) scale(1, 0.35);
+    filter: blur(64px);
+    opacity: 0.7;
+  }
+  
+  .btn-linkedin::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    background-color: #14fff1;
+    box-shadow: 0 0 128px 32px #14fff1;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+  }
+  
+  .btn-linkedin:hover::after,
+  .btn-linkedin:focus::after {
+    opacity: 1;
+  }
+  
+  .btn-linkedin:hover::before,
+  .btn-linkedin:focus::before {
+    opacity: 1;
+  }
+  
+  .btn-linkedin:hover,
+  .btn-linkedin:focus {
+    color:  #1d1d2e8e;
+    text-shadow: none;
+  }
 
  footer {
     padding: 0;
