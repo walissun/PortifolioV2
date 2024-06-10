@@ -157,6 +157,7 @@ main {
     align-items: center;
     text-align: center;
     z-index: 1000;
+    transition: opacity 1s ease-in-out;
 }
 
 #Creditos {
@@ -171,36 +172,25 @@ main {
     color: yellow;
     transform: rotateX(20deg);
     transform-origin: 50% 100%;
-    animation: crawl 10s linear;
+    animation: crawl 6s linear;
 }
 
 @keyframes crawl {
     0% {
         transform: rotateX(20deg) translateY(100%);
     }
+    50% {
+        transform: rotateX(20deg) translateY(0%);
+    }
     100% {
-        transform: rotateX(20deg) translateY(-200%);
+        transform: rotateX(20deg) translateY(0%);
     }
 }
 
-@keyframes slide-up {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(-100%); }
-}
-
-#pular {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #D27D2D;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#pular:hover {
-    background-color: #E9967A;
+#Conteudo-principal {
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 #princial {
