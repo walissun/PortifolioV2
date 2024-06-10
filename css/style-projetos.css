@@ -88,6 +88,9 @@ header {
     margin-left: 5px;
     animation: bounce 0.5s infinite alternate;
 }
+.hidden {
+    display: none;
+}
 @keyframes bounce {
     0% { transform: translateX(0); }
     100% { transform: translateX(5px); }
@@ -124,7 +127,6 @@ main {
 }
 
 .slider {
-    right: 100px;
     margin: 0 auto;
     width: 800px;
     height: 470px;
