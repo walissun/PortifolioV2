@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styke-Contatos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+    <title>Portifólio</title>
+</head>
+<body>
+    <header>
+        <div class="conteiner-menu">
+    <button id="toggleNav" class="menu">MENU</button>  
+    <nav id="navMenu">
+        <div id="subMenu">
+            <button onclick="location.href='Index.html';" class="Home">Inicio</button>
+            <button onclick="location.href='Projetos.html';" class="Projetos">Projetos</button>
+            <button onclick="location.href='Contatos.html';" class="Contatos">Contatos</button>
+        </div>
+    </nav>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="./assets/Audios/game-over-198365.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <button id="muteButton" class="mute-button" onclick="toggleMute()">
+        <i id="muteIcon" class="fas fa-volume-up"></i>
+    </button>
+    </div>  
+    </header>
+    <main>
+       <div id="Creditos-container" class="esconder">
+         <div id="Creditos">
+            <p>E com isso termina a sua grande jornada pelo meu mundo</p>
+                 <p>Espero que tenha conseguido me conhecer melhor</p>
+                     <p>E claro tenha se entredido tambem</p>
+         </div>
+         <button id="pular">Pular Creditos</button>
+       </div>
+       <div id="Conteudo-principal" class="esconder">
+            <h2>CONTATOS</h2>
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <label>Nome</label>
+                <input type="text" name="name" placeholder="Nome" autocomplete="off">
+                <label>E-mail</label>
+                <input type="email" name="email" placeholder="email" autocomplete="off">
+                <label>Mensagem</label>
+                <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem aqui"></textarea>
+                <button type="submit">Enviar</button>
+
+                <input type="hidden" name="accessKey" value="d9ffd5ed-a7a4-4caf-ac35-d45259f09dad">
+            </form>
+
+       </div>
+    </main>
+    <footer>
+       
+    </footer>
+    <script src="./js/slider.js" defer></script> 
+    <script src="./js/esconder menu.js" defer></script> 
+    <script src="./js/botao do audio.js" defer></script>
+ </body>
+ </html>
