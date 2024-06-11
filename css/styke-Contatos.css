@@ -130,51 +130,44 @@ header {
     100% { transform: translateY(0); }
 }
 
-main {
+.Container-pai, .Conteudo-principal {
     padding: 0;
     margin: 0;
     border: 0;
-
-    width: 100%;
-    height: 270px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 436.667px;
+    height: 704.618px;
+    transform: translate(-50%, -50%);
+    position: absolute;
     font-family: sans-serif;
 }
 
-.Container-pai {
+.alinhar {
     display: flex;
-    align-items: center;
     justify-content: center;
-
-
-}
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    text-decoration: none;
     flex-direction: column;
     padding: 10px 45px;
-    margin-left: 200px;
     background-color: #1d1d2e8e;
-    width: 500px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 16px;
+
 }
 
-section h2 {
+.alinhar h2 {
     color: #f5f5f5;
     font-size: 40px;
     margin: 32px;
 }
 
- section form {
+.alinhar form {
     display: flex;
     flex-direction: column;
     width: 100%;
- }
+   
+}
 
 form label {
     color: #f5f5f5;
@@ -182,7 +175,7 @@ form label {
     margin: 4px;
  }
 
-form input {
+ form input {
     padding: 15px;
     outline: none;
     border: 0;
@@ -191,7 +184,7 @@ form input {
     transition: all 0.5s;
  }
 
-form input:focus {
+ form input:focus {
     border-radius: 16px;
  }
 
@@ -204,7 +197,7 @@ form textarea {
     transition: all 0.5s;
  }
 
-form textarea:focus {
+ form textarea:focus {
     border-radius: 16px;
  }
 
@@ -218,48 +211,57 @@ form button {
     margin-bottom: 20px;
     color: #f5f5f5;
  }
- 
-form button:hover {
+
+ form button:hover {
     background-color: #f5f5f5;
     color: #101026;
     border-radius: 16px;
  }
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
+.btn-sociais {
+    position: absolute;
+    top: 70%;
+    right: 650px;
+    transform: translateY(-100%);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
-.btn-git {
-    display: inline-block;
+.btn-git, .btn-linkedin {
+    display: flex;
     text-decoration: none;
     font-size: 27px;
     color: #14fff1;
-    margin-left: 27px;
     padding: 16px 64px;
     border-radius: 16px;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #14fff1;
     box-shadow: inset 0 0 32px #1d1d2e8e, 0 0 32px #1d1d2e8e;
-    position: relative;
     animation: floating 3s infinite;
-  }
-  
-  .btn-git::before {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #14fff1;
-    left: 0;
-    top: 120%;
-    transform: perspective(64px) rotateX(40deg) scale(1, 0.35);
-    filter: blur(64px);
-    opacity: 0.7;
-  }
-  
-  .btn-git::after {
+    justify-content: right;
+ }
+
+ .btn-git:hover, .btn-linkedin:hover {
+    transform: scale(1.05);
+}
+
+ .btn-git::before,
+ .btn-linkedin::before {
+     pointer-events: none;
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: #14fff1;
+     left: 0;
+     top: 120%;
+     transform: perspective(64px) rotateX(40deg) scale(1, 0.35);
+     filter: blur(64px);
+     opacity: 0.7;
+ }
+
+ .btn-git::after,
+.btn-linkedin::after {
     content: "";
     position: absolute;
     top: 0;
@@ -272,85 +274,37 @@ form button:hover {
     z-index: -1;
     opacity: 0;
     transition: opacity 100ms linear;
-  }
-  
-  .btn-git:hover::after,
-  .btn-git:focus::after {
-    opacity: 1;
-  }
-  
-  .btn-git:hover::before,
-  .btn-git:focus::before {
-    opacity: 1;
-  }
-  
-  .btn-git:hover,
-  .btn-git:focus {
-    color:  #1d1d2e8e;
-    text-shadow: none;
-  }
+}
 
-  .btn-linkedin {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 27px;
-    color: #14fff1;
-    top: 200px;
-    right: 250px;
-    margin-left: 27px;
-    padding: 16px 64px;
-    border-radius: 16px;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #14fff1;
-    box-shadow: inset 0 0 32px  #1d1d2e8e, 0 0 32px  #1d1d2e8e;
-    position: relative;
-    animation: floating 3s infinite;
-  }
-  
-  .btn-linkedin::before {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #14fff1;
-    left: 0;
-    top: 120%;
-    transform: perspective(64px) rotateX(40deg) scale(1, 0.35);
-    filter: blur(64px);
-    opacity: 0.7;
-  }
-  
-  .btn-linkedin::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 16px;
-    background-color: #14fff1;
-    box-shadow: 0 0 128px 32px #14fff1;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 100ms linear;
-  }
-  
-  .btn-linkedin:hover::after,
-  .btn-linkedin:focus::after {
+.btn-git:hover::after,
+.btn-git:focus::after,
+.btn-linkedin:hover::after,
+.btn-linkedin:focus::after {
     opacity: 1;
-  }
-  
-  .btn-linkedin:hover::before,
-  .btn-linkedin:focus::before {
-    opacity: 1;
-  }
-  
-  .btn-linkedin:hover,
-  .btn-linkedin:focus {
-    color:  #1d1d2e8e;
-    text-shadow: none;
-  }
+}
 
+.btn-git:hover::before,
+.btn-git:focus::before,
+.btn-linkedin:hover::before,
+.btn-linkedin:focus::before {
+    opacity: 1;
+}
+
+.btn-git:hover,
+.btn-git:focus,
+.btn-linkedin:hover,
+.btn-linkedin:focus {
+    color: #1d1d2e8e;
+    text-shadow: none;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+ 
  footer {
     padding: 0;
     margin: 0;
@@ -378,9 +332,10 @@ form button:hover {
 .proximapg .arrow-down  {
     text-decoration: none;
     position: fixed;
-    top: 900px;
-    left: 48%;
-    transform: translate(-50%, -50%);
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
     justify-content: center;
     align-items: center;
     color: #ffffff;
